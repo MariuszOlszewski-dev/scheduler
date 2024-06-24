@@ -67,8 +67,8 @@ const App = () => {
           id: uniqid(),
           startDate: added.startDate.toISOString(),
           endDate: added.endDate.toISOString(),
-          title: added.title,
-          notes: added.notes,
+          title: added.title ? added.title : "Brak tytułu",
+          notes: added.notes ? added.notes : "Brak notatki",
           allDay: added.allDay,
         };
         newData = [...newData, newAppointment];
